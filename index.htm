@@ -42,7 +42,7 @@
             };
 
             var settings = new TDV.PlayerSettings();
-            
+            settings.set(TDV.PlayerSettings.ACTIVE_VIDEO_ELEMENT, document.getElementById("video_2198A96C_2DDE_AD26_41B6_52B7DDB4A1E2"));
             settings.set(TDV.PlayerSettings.CONTAINER, document.getElementById('viewer'));
             settings.set(TDV.PlayerSettings.SCRIPT_URL, 'script.js');
             settings.set(TDV.PlayerSettings.FLASH_EXPRESS_INSTALLER_URL, 'lib/ExpressInstall.swf');
@@ -148,7 +148,7 @@
             var transitionEnd = transitionEndEventName();
             var preloadContainer = document.getElementById('preloadContainer');
 
-            
+            document.getElementById("video_2198A96C_2DDE_AD26_41B6_52B7DDB4A1E2").pause();
 
             var transitionEndName = transitionEndEventName();
             if(transitionEndName)
@@ -202,8 +202,10 @@
                 return;
             }
 
-            showPreloader();
-loadTour()
+            playVideo(document.getElementById("video_2198A96C_2DDE_AD26_41B6_52B7DDB4A1E2"));
+document.body.addEventListener("click", onBodyClick);
+document.body.addEventListener("touchend", onBodyClick);
+showPreloader()
         }
 
         function playVideo(video) {
@@ -261,7 +263,7 @@ loadTour()
     
 </head>
 <body onload="onLoad()">
-    <div id="preloadContainer" style="background-color:rgba(255,255,255,1)"><div style="z-index: 4; position: absolute; left: 0%; top: 50%; width: 100.00%; height: 10.00%"><div style="text-align:left; color:#000; "><DIV STYLE="text-align:center;"><SPAN STYLE="letter-spacing:0px;color:#777777;font-size:14px;font-family:Arial, Helvetica, sans-serif;">Loading virtual tour. Please wait...</SPAN></DIV><p STYLE="margin:0; line-height:12px;"><BR STYLE="letter-spacing:0px;color:#000000;font-size:12px;font-family:Arial, Helvetica, sans-serif;"/></p></div></div></div>
+    <div id="preloadContainer" style="background-color:rgba(255,255,255,1)"><div style="z-index: 4; position: absolute; display: flex; align-items: center; text-align: center; overflow: hidden; right: 8.867427568042142%; bottom: 59.50479233226837%; width: 39.07%; height: 30.22%"><video id="video_2198A96C_2DDE_AD26_41B6_52B7DDB4A1E2" width="100%" height="100%" loop autoplay playsinline webkit-playsinline poster="media/video_2198A96C_2DDE_AD26_41B6_52B7DDB4A1E2_poster.jpg" preload="auto"><source src="media/video_2198A96C_2DDE_AD26_41B6_52B7DDB4A1E2.mp4" type="video/mp4">Your browser does not support the video tab</video></div><div style="z-index: 5; position: absolute; background-image: url('loading/HTMLImage_21A6A518_2DD9_FAED_4190_9EE8790B0535.png'); background-size: contain; background-repeat: no-repeat; background-position: center center; overflow: hidden; right: 52.37050043898157%; top: 5.319488817891371%; width: 28.55%; height: 39.99%"></div><div style="z-index: 6; position: absolute; background-image: url('loading/HTMLImage_21FCDD49_2DDF_656E_41C6_43F84A7AD30B.png'); background-size: contain; background-repeat: no-repeat; background-position: center center; overflow: hidden; right: 10.140474100087786%; bottom: 16.773162939297137%; width: 74.36%; height: 11.58%"></div><div style="z-index: 7; position: absolute; background-image: url('loading/HTMLImage_26AACF10_2DDB_66FD_41C0_3BCCCEC8FE67.png'); background-size: contain; background-repeat: no-repeat; background-position: center center; overflow: hidden; right: 43.59086918349429%; bottom: 32.428115015974434%; width: 7.07%; height: 14.96%"></div><div style="z-index: 8; position: absolute; left: 28.841088674275678%; top: 49.04153354632589%; width: 47.85%; height: 7.83%"><div style="text-align:left; color:#000; "><DIV STYLE="text-align:center;"><SPAN STYLE="letter-spacing:0px;color:#777777;font-size:14px;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="color:#000000;font-size:22px;">Loading virtual tour.</SPAN><SPAN STYLE="font-size:22px;"> </SPAN><SPAN STYLE="color:#cc0000;font-size:22px;">CLICK </SPAN><SPAN STYLE="color:#000000;font-size:22px;">to Start</SPAN></SPAN></DIV></div></div></div>
     <div id="viewer"></div>
 </body>
 </html>
